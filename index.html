@@ -1,38 +1,37 @@
 <!DOCTYPE html>
-<html>
-
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  <meta charset="utf-8">
   <title>Caption generation demo</title>
   <script src="./inflate.min.js"></script>
   <script src="./webdnn.js"></script>
   <script src="./index.js"></script>
-  <style>
-    .progress {
-      margin-top: 10px;
-    }
-
-    #sentences {
-      font-size: large;
-    }
-  </style>
+  <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+  <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
-
 <body>
-  <h1>Generating image caption demo</h1>
-  Input image (can drag-drop image file):<br>
+
+<div id="header">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" /> 
+</div>
+<div id="gutter"> </div>
+<div id="col1">
+  <h1>Caption generation demo</h1>
+  <h4>Input image (can drag-drop image file):</h4>
+  <p><span class="capital"> G</span> <h1>enerating image caption demo</h1>
+
   <canvas id="image" width="224" height="224"></canvas><br>
   <input type="file" id="load_local_image"><br>
-  <button type="button" id="run_button" onclick="run(); return false;">Generate caption</button><br>
+  <button type="button" id="run_button" onclick="run(); return false;">Generate caption</button>
+  <br>
   <div class="progress">
     <span class="progress-item progress-item-0">Load models</span> &gt;
     <span class="progress-item progress-item-1">Analyze image</span> &gt;
     <span class="progress-item progress-item-2">Generate text</span>
   </div>
-  <pre id="sentences">Generated caption will be shown here.</pre>
-
-  <!-- <hr> Transferred to browser demo using <a href="https://github.com/mil-tokyo/webdnn">WebDNN</a> by <a href="https://github.com/milhidaka">@milhidaka</a>, -->
-  <!-- based on <a href="https://github.com/dsanno">@dsanno</a>'s model. <a href="https://github.com/milhidaka/chainer-image-caption">Github</a> -->
-</body>
-
+  <h3>
+    <blockquote> 
+      <pre id="sentences">Generated caption will be shown here.</pre>
+    </blockquote>
+  </h3>
+</div>
 </html>
